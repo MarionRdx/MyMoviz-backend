@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const API_KEY=process.env.API_KEY
 
 router.get('/movies', (req, res) => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR&page=${page}`)
     .then(response => response.json())
     .then(data => {
         console.log(data)
